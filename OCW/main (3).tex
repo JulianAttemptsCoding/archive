@@ -1,0 +1,370 @@
+\documentclass[10pt, a4paper, landscape]{article}
+
+% --- UNIVERSAL PREAMBLE BLOCK ---
+% Setup for text and fonts compatibility on Overleaf (pdflatex)
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% Use Helvetica (standard Sans Serif) for compatibility
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[margin=1.25cm, top=1.5cm, bottom=1.5cm]{geometry}
+
+% Packages for tables and links
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{ragged2e} % For better text wrapping alignment
+
+% Define column types for better wrapping
+\newcolumntype{L}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+
+% Custom colors for headers
+\definecolor{headerblue}{RGB}{40, 80, 120}
+\definecolor{rowgray}{gray}{0.95}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={Open Courseware Learning Path},
+    pdfauthor={Curated List}
+}
+
+\title{\textbf{Open Courseware (OCW) Learning Path}}
+\author{Curated List}
+\date{Updated 2025}
+
+\begin{document}
+
+\maketitle
+
+\section*{Set A: Upper Division Undergrad \& Graduate Level}
+\textit{Subjects: Applied Math, Mathematical Modeling, Theoretical Physics, Applied Physics, Financial Engineering, Optimization, Quant Ops, ML, DL.}
+\begin{longtable}{L{2cm} L{3.5cm} L{1.8cm} L{6cm} L{3.5cm} L{2cm} L{5cm}}
+    \caption{Theoretical Physics, Applied Math, and Machine Learning}\\
+    \toprule
+    \textbf{Institute} & \textbf{Course Name} & \textbf{Level} & \textbf{Summary} & \textbf{Prerequisites} & \textbf{Hardness} & \textbf{Leads To / Info} \\
+    \midrule
+    \endfirsthead
+    
+    \multicolumn{7}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+    \toprule
+    \textbf{Institute} & \textbf{Course Name} & \textbf{Level} & \textbf{Summary} & \textbf{Prerequisites} & \textbf{Hardness} & \textbf{Leads To / Info} \\
+    \midrule
+    \endhead
+    
+    \midrule
+    \multicolumn{7}{r}{{Continued on next page}} \\
+    \bottomrule
+    \endfoot
+    
+    \bottomrule
+    \endlastfoot
+
+    % --- SECTION 1: THEORETICAL PHYSICS ---
+    \multicolumn{7}{l}{\textbf{\color{headerblue}1. Theoretical Physics (Upper Div / Grad)}} \\
+    \midrule
+    Perimeter Institute (PSI) & \href{PSI string theory PIRSA archive.}{String Theory (PSI) String Theory (Perimeter Scholars International)} & Advanced graduate (Set A) & Graduate-level string theory course; worldsheet formulation, conformal field theory, string spectra, and basic string phenomenology. & Quantum field theory at the level of PSI QFT or MIT 8.323; differential geometry; group theory. & Extreme. & Research in string theory, quantum gravity, and advanced formal theory. \\
+    \addlinespace
+    Perimeter Institute (PSI) & \href{PIRSA/SciVideos QFT lecture archive for PSI (e.g., 2016/2017 QFT I).}{PSI QFT I / QFT II Quantum Field Theory I \& II (PSI)} & Graduate / advanced graduate (Set A) & Intensive QFT sequence from PSI covering canonical and path integral quantization, renormalization, gauge theories, and modern topics; delivered as research-oriented short courses. & Strong graduate-level QM; special relativity; classical fields; prior exposure to basic QFT (e.g., Tong or 8.323) strongly recommended. & Extreme (research-level pacing). & Academic research in high-energy theory, cosmology, and related areas. \\
+    \addlinespace
+    University of Cambridge & \href{https://www.damtp.cam.ac.uk/user/tong/qft.html}{QFT (Lecture Notes) Lectures on Quantum Field Theory} & Graduate (Set A) & Canonical introductory QFT notes emphasizing physical intuition; covers relativistic fields, path integrals, perturbation theory, renormalization, and gauge theory. & Special relativity; advanced quantum mechanics (operator formalism); Lagrangian and Hamiltonian classical field theory; strong mathematical maturity. & Very High (conceptually dense graduate QFT). & Advanced QFT, gauge theory, particle physics, string theory; preparation for PSI QFT courses and MIT 8.323. \\
+    \addlinespace
+    MIT & \href{MIT OCW page for 8.06 Quantum Physics III (Spring 2018).}{8.06 Quantum Physics III} & Upper-division undergraduate / bridge to graduate (Set A) & Covers perturbation theory, scattering theory, WKB approximation, Aharonov–Bohm effect, and Berry phase, with applications to condensed matter and topological phenomena. & MIT 8.05 or equivalent; comfort with complex analysis and linear algebra in Hilbert space. & Very High (technique-heavy, “messy” physics). & Quantum field theory, advanced condensed matter, topological insulators, graduate AMO/CM courses. \\
+    \addlinespace
+    MIT & \href{MIT OCW page for 8.05 Quantum Physics II (Fall 2013).}{8.05 Quantum Physics II} & Upper-division undergraduate (Set A) & Matrix/mechanics–focused continuation of 8.04; develops Dirac bra–ket formalism, Hermitian operators, unitary time evolution, and spin systems. & MIT 8.04 or equivalent QM I; solid linear algebra and differential equations. & High (major abstraction jump from wave to matrix mechanics). & MIT 8.06; graduate quantum theory; quantum computing, quantum information. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/}{8.04 Quantum Physics I} & Upper-division undergraduate (Set A) & First quantum mechanics course; experimental basis of quantum physics, wave mechanics, and Schrödinger equation in 1D and 3D. & Single-variable and multivariable calculus, differential equations, linear algebra, and an introductory classical mechanics course. & High (first serious QM course) & MIT 8.05 Quantum Physics II; MIT 8.06 Quantum Physics III; Atomic Physics; Quantum Information Science. \\
+    \addlinespace
+    \addlinespace
+    \addlinespace
+    \addlinespace
+    Stanford & \href{https://theoreticalminimum.com/courses/quantum-mechanics/2012/winter}{Theoretical Minimum: Quantum Mechanics} & Upper Undergrad & Conceptual focus on entanglement, spins, and the logic of QM. Replaces broken Berkeley 137A link. & Calculus, Linear Algebra & High & Intuitive foundation before rigorous matrix mechanics. \\
+    \addlinespace
+    Cambridge & \href{https://www.damtp.cam.ac.uk/user/tong/qft.html}{Lectures on Theoretical Physics} & Graduate & David Tong's legendary notes on QFT. Wilsonian renormalization, scalar/spinor fields. & Classical Field Theory & Very High & Best written QFT resource available. PDF mirrors recommended. \\
+    \addlinespace
+    MIT & \href{MIT OCW or MIT course site for 8.323 Relativistic Quantum Field Theory I.}{8.323 Relativistic Quantum Field Theory I} & Graduate (Set A) & Graduate introduction to canonical QFT; relativistic scalar fields, spinor fields, quantization, Feynman diagrams, and renormalization in canonical formalism. & MIT 8.05/8.06 or equivalent advanced QM; special relativity; strong comfort with Lagrangian/Hamiltonian mechanics and complex analysis. & Very High for autodidacts. & QFT II, advanced particle physics, quantum many-body theory, string theory. \\
+    \addlinespace
+    Perimeter Inst. & \href{https://pirsa.org/C16012}{PSI Quantum Field Theory II} & Graduate & Path integral formulation, non-abelian gauge theories, advanced renormalization. Direct PIRSA link. & QFT I & Extreme & Standard Model research. \\
+    \addlinespace
+    Perimeter Inst. & \href{https://pirsa.org/C15011}{PSI Cosmology} & Graduate & FRW spacetime, Big Bang Nucleosynthesis, Inflation, CMB data analysis. & GR, QFT & Very High & Early universe physics. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/8-333-statistical-mechanics-i-statistical-mechanics-of-particles-fall-2013/}{8.333 Statistical Mechanics I} & Graduate & Density matrix, path integrals in stat mech, Landau-Ginzburg theory, phase transitions. & QM, Thermodynamics & Very High & Condensed Matter Theory. \\
+    \addlinespace
+    MIT / Oxford & \href{https://ocw.mit.edu/courses/8-09-classical-mechanics-iii-fall-2014/}{8.09 Classical Mechanics III} & Graduate & Lagrangian and Hamiltonian formalisms. Least Action Principle. Path Integral foundation. & Multivariate Calc, Diff Eq & High & Necessary foundation for 8.323 (QFT). \\
+    \addlinespace
+    Stanford (Theoretical Minimum / Susskind) & \href{https://theoreticalminimum.com/courses/general-relativity/2012/fall}{GR (Theoretical Minimum) General Relativity} & Upper-division undergraduate / early graduate (Set A) & Conceptual introduction to GR emphasizing physical ideas (equivalence principle, curvature, geodesics) before full tensor calculus; uses Susskind’s “theoretical minimum” style. & Classical mechanics; multivariable calculus; special relativity; some linear algebra. & High. & Graduate GR, cosmology, black hole physics, PSI cosmology courses. \\
+    \addlinespace
+    CERN & \href{https://academic-training.web.cern.ch/archive}{Academic Training Lectures} & Graduate & Specialized training on LHC physics, detectors, and the Standard Model. & Particle Physics & High & Experimental High Energy Physics. \\
+    \addlinespace
+    Perimeter Inst. & \href{https://pirsa.org/C14013}{String Theory / Quantum Gravity} & Graduate & Attempts to unify Gravity with the Standard Model. The Theoretical frontier. & QFT, GR & Extreme & The logical endpoint of theoretical research. \\
+
+    % --- SECTION 2: APPLIED PHYSICS & ENGINEERING SCIENCE ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}2. Applied Physics \& Engineering Science}} \\
+    \midrule
+    MIT & \href{MIT 10.50/10.50x course/OCW page or MOOC listing.}{10.50 Analysis of Transport Phenomena} & Graduate chemical engineering core (Set A) & Unified treatment of momentum, heat, and mass transfer; scaling, asymptotic analysis, and conservation laws for transport in fluids and solids. & Undergraduate fluid mechanics, heat transfer, differential equations, vector calculus. & High. & Advanced CFD, transport modeling in energy systems, process design. \\
+    \addlinespace
+    IIT Kharagpur (NPTEL) & \href{https://onlinecourses.nptel.ac.in/noc25_ch43/preview}{NPTEL Transport Phenomena Transport Phenomena} & Upper-division undergraduate / graduate (Set A) & Video course on momentum, heat, and mass transfer with mathematically rigorous derivations and worked examples. & Undergraduate chemical engineering thermodynamics and fluid mechanics; differential equations. & High. & Same applications as MIT 10.50; alternative path for video-first learners. \\
+    \addlinespace
+    MIT & \href{MIT OCW page for 2.25 Advanced Fluid Mechanics.}{2.25 Advanced Fluid Mechanics} & Graduate mechanical engineering (Set A) & Rigorous treatment of incompressible flow, boundary layers, instability, and turbulence; theoretical underpinning for CFD and aero/hydro design. & Undergraduate fluid mechanics; vector calculus; PDEs; basic numerical methods helpful. & Very High. & Aerospace engineering, climate and ocean modeling, CFD research. \\
+    \addlinespace
+    MIT & \href{MIT OCW page for 6.832 Underactuated Robotics; live course site underactuated.csail.mit.edu for textbook.}{6.832 Underactuated Robotics} & Graduate / advanced undergraduate (Set A) & Dynamics and control of systems with fewer actuators than degrees of freedom (e.g., walking robots, acrobatic systems); optimization-based planning and feedback design. & Linear algebra; multivariable calculus; differential equations; some control theory and dynamics. & High. & Legged robotics, manipulation, research roles in robotics labs and companies (e.g., Boston Dynamics, Agility Robotics). \\
+    \addlinespace
+    University of Washington & \href{Representative lecture: https://www.youtube.com/watch?v=JoFW2uSd3Uo}{PIML (Brunton) Physics-Informed Machine Learning} & Graduate (Set A) & Videos on embedding physical structure (PDEs, dynamical systems) into ML models; includes sparse regression (SINDy), PINNs, and model discovery for dynamical systems. & Linear algebra, differential equations, basic dynamical systems, introductory ML / neural networks. & High. & Digital twins, scientific ML, physics-informed neural networks in engineering and climate applications. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/}{18.085/086 Comp Science} & Upper Undergrad & FEM, Finite Difference, spectral methods. Taught by Gilbert Strang. & Calculus, Linear Algebra & $\sim$10 hrs/wk & Numerical simulation foundation. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/2-43-advanced-thermodynamics-fall-2019/}{2.43 Advanced Thermodynamics} & Graduate & Stability of equilibrium, statistical mechanics, entropy generation, non-equilibrium. & Thermodynamics, Diff Eq & High & Energy Systems rigor. \\
+    \addlinespace
+    CERN & \href{https://academic-training.web.cern.ch/}{Intro to Accelerator Physics} & Upper Undergrad & Physics of particle beams, magnets, RF cavities, synchrotron radiation. & Electromagnetism & Moderate & Niche but critical high-precision control. \\
+
+    % --- SECTION 3: APPLIED MATH & OPTIMIZATION ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}3. Applied Math \& Optimization}} \\
+    \midrule
+    Carnegie Mellon University & \href{https://www.stat.cmu.edu/~ryantibs/convexopt/}{10-725 Convex Optimization} & Graduate (Set A) & Statistics-oriented convex optimization course emphasizing probabilistic modeling, regularization, and ML applications. & Measure/probability at graduate level; linear algebra; some real analysis. & Very High. & Statistical ML, optimization research, advanced data science. \\
+    \addlinespace
+    MIT & \href{MIT OCW page for 18.065 (Spring 2018).}{18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning} & Graduate (Set A) & SVD-centric linear algebra course covering PCA, low-rank approximation, compressed sensing, and matrix factorization as core tools for data analysis. & Undergraduate linear algebra (18.06-level); multivariable calculus. & High. & Machine learning, signal processing, numerical linear algebra, data science. \\
+    \addlinespace
+    Stanford & \href{https://see.stanford.edu/Course/EE263}{EE263 Linear Dynamical Systems} & Graduate & SVD, least squares, autonomous linear systems, matrix exponentials. & Linear Algebra & High & Control Theory / Signal Processing foundation. \\
+    \addlinespace
+    Stanford & \href{https://web.stanford.edu/class/ee364a/}{EE364a Convex Optimization} & Graduate (Set A) & Foundational course on convex sets, functions, optimization problems, duality, and interior-point methods, with applications to ML, control, and signal processing. & Linear algebra; basic real analysis; some probability and programming helpful. & Very High. & Optimization research, advanced ML theory, control, operations research. \\
+    \addlinespace
+    MIT & \href{MIT course/OCW page for 18.657 (Fall 2015).}{18.657 Mathematics of Machine Learning} & Graduate (Set A) & Statistical learning theory course covering VC dimension, Rademacher complexity, generalization bounds, and classical theory for empirical risk minimization. & Probability, real analysis, linear algebra; basic statistics. & Very High. & Theoretical ML research; reading on neural tangent kernels and over-parameterized models. \\
+    \addlinespace
+    Georgia Tech & \href{https://www.edx.org/learn/analytics/the-georgia-institute-of-technology-introduction-to-analytics-modeling}{ISYE 6501 Analytics Modeling} & Graduate & Classification, clustering, time-series, supply chain optimization. & Prob, R Coding & Moderate & Industrial Systems Engineering. Replaces generic link. \\
+    \addlinespace
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/15-093-optimization-methods-fall-2009/}{15.093 Optimization Methods} & Graduate & Linear, nonlinear, integer, and dynamic programming theory. & Linear Algebra, Multivariate Calc & High & Operations Research / Logistics. \\
+    \addlinespace
+    \addlinespace
+    Cornell / ETH & \href{https://www.coursera.org/learn/discrete-optimization}{Computational Optimization} & Graduate & Mixed-Integer Linear Programming (MILP) and Global Optimization techniques. & Linear Algebra, Calculus & High & Systems Design / Chemical Engineering. \\
+    \addlinespace
+    Oxford & \href{https://courses.maths.ox.ac.uk/}{Calculus of Variations} & Upper Undergrad & Functionals, Euler-Lagrange equations, applications to geometry/physics. & Calculus, Diff Eq & Moderate & Theoretical Mechanics foundation. \\
+    \addlinespace
+    Oxford & \href{https://www.maths.ox.ac.uk/groups/mathematical-biology}{Mathematical Modelling in Biology} & Upper Undergrad & Enzyme kinetics, reaction-diffusion systems (Turing patterns). & Diff Eq, Dynamics & Moderate & Computational Biology / Systems Biology. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/18-s997-high-dimensional-probability-and-statistics-non-asymptotic-viewpoint-fall-2015/}{High-Dimensional Probability} & Graduate & Concentration inequalities, random matrix theory. Geometry of high-dim space. & Real Analysis, Probability & Very High & "Big Data" is different from samples. ML Theory. \\
+    \addlinespace
+    CUHK / Coursera & \href{https://www.coursera.org/learn/information-theory}{Information Theory} & Graduate & Entropy, Mutual Information, Channel Capacity. Replaces MIT 6.441 (no video). & Probability & High & Coding Theory / Deep Learning Theory. \\
+    \addlinespace
+    MIT / Brown & \href{https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/}{6.046 Advanced Algorithms} & Graduate & Randomized Algorithms, Amortized Analysis, NP-Hard problems. & 6.006 Algorithms & Very High & Mechanism Design / CS Research. \\
+    \addlinespace
+    UC Berkeley & \href{https://inst.eecs.berkeley.edu/~ee127/}{EECS 127: Optimization Models} & Upper Undergrad & Linear/Quadratic programming, SVD, PCA, Convex Optimization. & Lin Alg, Calc & High & Crucial for modern AI / Control. \\
+
+    % --- SECTION 4: MACHINE LEARNING & DEEP LEARNING ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}4. Machine Learning \& Deep Learning}} \\
+    \midrule
+    UC Berkeley & \href{https://rail.eecs.berkeley.edu/deeprlcourse-fa20/}{CS285 Deep Reinforcement Learning} & Graduate (Set A) & Project-oriented deep RL course with policy gradients, actor–critic methods, off-policy learning, and practical implementations in PyTorch/TensorFlow. & Silver RL theory or equivalent; deep learning; strong programming skills. & Very High. & Applied deep RL in robotics, recommendation, operations, and research. \\
+    \addlinespace
+    UCL / DeepMind & \href{YouTube playlist “RL Course by David Silver”.}{David Silver RL Course Reinforcement Learning} & Graduate / advanced undergraduate (Set A) & Foundational RL lecture series; MDPs, Bellman equations, dynamic programming, Monte Carlo methods, TD learning, function approximation. & Probability, linear algebra, basic ML; some programming. & High. & Deep RL implementations (e.g., Berkeley CS285), RL research and applications (games, control, recommendation). \\
+    \addlinespace
+    Stanford & \href{https://web.stanford.edu/class/cs224w/}{CS224w Machine Learning with Graphs} & Graduate / advanced undergraduate (Set A) & Core course on graph representation learning, graph neural networks, and applications to social networks, recommendation systems, and drug discovery. & Linear algebra, probability, basic ML; Python programming. & High. & GNN research, graph-based ML in industry (recsys, fraud, molecule design). \\
+    \addlinespace
+    Stanford & \href{http://cs231n.stanford.edu/}{CS231n Convolutional Neural Networks for Visual Recognition} & Upper-division undergraduate / graduate (Set A) & Image classification and visual recognition with CNNs; data augmentation, optimization, and modern architectures, with growing coverage of Vision Transformers. & Linear algebra, probability, Python programming, basic deep learning. & High. & Computer vision research and engineering roles; ViT and diffusion model study. \\
+    \addlinespace
+    Stanford & \href{https://web.stanford.edu/class/cs224n/}{CS224n Natural Language Processing with Deep Learning} & Graduate / advanced undergraduate (Set A) & Modern NLP course focused on attention mechanisms, Transformers, pretrained language models, and LLM-based NLP systems. & Deep learning basics; Python; strong linear algebra and probability. & High. & LLM research, NLP engineering, prompt-engineering and RLHF-related work. \\
+    \addlinespace
+    \addlinespace
+    Stanford & \href{https://online.stanford.edu/courses/cs330-deep-multi-task-and-meta-learning}{CS330 Meta Learning} & Graduate & Few-shot learning, MAML, transfer learning, adaptability. & Deep Learning, RL & Very High & AGI Research / Frontier AI. \\
+    \addlinespace
+    \addlinespace
+    Hugging Face & \href{https://huggingface.co/learn/deep-rl-course/unit0/introduction}{Deep RL Course} & Graduate & Practical implementation of RL agents, Unity ML-Agents, Stable Baselines. & Python, PyTorch & Moderate & Applied RL deployment. \\
+    \addlinespace
+    UC Berkeley & \href{https://people.eecs.berkeley.edu/~jrs/189/}{CS 189: Intro to Machine Learning} & Upper Undergrad & Rigorous math foundation: regression, kernels, neural nets, clustering by hand. & Math 53/54, CS 70 & Very High & Deriving gradients by hand. Legendary difficulty. \\
+    \addlinespace
+    CMU & \href{https://www.cs.cmu.edu/~tom/10701_sp11/}{10-701 Intro to Machine Learning} & Graduate & Statistical/philosophical underpinnings: Inductive bias, PAC learning, VC dimension. & Probability, Statistics & Very High & ML Theory Research (Tom Mitchell). \\
+    \addlinespace
+    Caltech & \href{https://work.caltech.edu/telecourse}{CS 156 Learning from Data} & Upper Undergrad & Generalization, bias-variance tradeoff, VC inequality. Why learning is possible. & Probability, Lin Alg & High & Taught by Yaser Abu-Mostafa. \\
+    \addlinespace
+    UC Berkeley & \href{https://inst.eecs.berkeley.edu/~cs182/}{CS 182: Deep Neural Networks} & Upper Undergrad & Backprop, CNNs, RNNs, transformers, Deep RL, and optimization landscapes. & CS 189 & High & Engineering work. \\
+    \addlinespace
+    \addlinespace
+    NYU Center for Data Science & \href{https://atcold.github.io/NYU-DLSP21/}{NYU DL Deep Learning} & Graduate (Set A) & Deep learning course emphasizing energy-based models, self-supervised learning, and modern architectures, reflecting LeCun’s research perspective. & Linear algebra, probability, calculus; basic ML; competent Python programming. & High. & Advanced research/engineering roles in deep learning, energy-based models, and representation learning. \\
+
+    % --- SECTION 5: COMPUTER SCIENCE & SYSTEMS ENGINEERING (GRAD) ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}5. Computer Science \& Systems Engineering (Grad)}} \\
+    \midrule
+    ETH Zürich & \href{https://www.youtube.com/@OnurMutluLectures/streams}{Onur Mutlu Architecture Courses Computer Architecture and Memory Systems} & Graduate / advanced undergraduate (Set A/B) & Updated architecture lectures including modern topics like RowHammer, speculative execution attacks (Meltdown/Spectre), and advanced memory systems. & Undergraduate computer architecture/digital logic. & Very High. & Hardware/architecture research, high-performance computing, systems design. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/6-824-distributed-computer-systems-engineering-spring-2006/}{6.824 (now 6.5840) Distributed Computer Systems Engineering} & Graduate (Set A) & Core distributed systems course; RPC, consistency, replication, fault tolerance, MapReduce, Raft/Paxos, and modern storage systems. & Operating systems and systems programming (e.g., 6.004 + 6.033/6.828); strong Go/low-level coding skills. & Very High. & Backend/distributed systems engineering roles; infra for large-scale ML systems. \\
+    \addlinespace
+    MIT & \href{https://pdos.csail.mit.edu/6.824/}{6.824 Distributed Systems} & Graduate & Fault tolerance, Paxos/Raft consensus, MapReduce, Spanner. Building sharded KV stores. & Go, Concurrency & Very High & Backend / Infrastructure Engineering. \\
+    \addlinespace
+    Carnegie Mellon University & \href{Archived CMU 18-447 course pages (if still available).}{18-447 Introduction to Computer Architecture} & Upper-division undergraduate (Set B) & Undergrad computer architecture course (Onur Mutlu legacy version); pipeline, caches, memory systems, and basic microarchitecture. & Digital logic and basic computer organization. & High. & ETH advanced architecture courses; hardware design roles. \\
+    \addlinespace
+    ETH Zurich & \href{https://www.youtube.com/c/OnurMutluLectures}{Computer Architecture (Mutlu)} & Graduate & Out-of-order execution, branch prediction, memory consistency, RowHammer security. & Comp Org & Very High & Replaces CMU 18-447. High-Performance Computing. \\
+    \addlinespace
+
+    % --- SECTION 6: FINANCIAL ENGINEERING ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}6. Financial Engineering \& Banking Systems}} \\
+    \midrule
+    Columbia University & \href{Coursera specialization page “Financial Engineering and Risk Management”.}{Coursera FE\&RM Financial Engineering and Risk Management Specialization} & Upper-division undergraduate / professional (Set A) & MOOC sequence on derivative pricing, risk management, and basic stochastic calculus for finance. & Probability, calculus, linear algebra. & High. & Preparatory background for MFE programs and junior quant roles. \\
+    \addlinespace
+    NYU Stern & \href{Damodaran’s course page at pages.stern.nyu.edu/~adamodar/}{Investment Valuation Investment Valuation} & Upper-division undergraduate / MBA (Set A) & Fundamental equity valuation: DCF, risk premiums, capital structure, and practical valuation of companies; heavy use of real-world data. & Introductory corporate finance; basic accounting and statistics. & Medium–High. & Equity research, corporate finance, fundamental investing. \\
+    \addlinespace
+    Columbia & \href{https://www.coursera.org/specializations/financialengineering}{Financial Eng \& Risk Mgmt} & Graduate & Derivatives pricing, Black-Scholes, term-structure modeling, volatility calibration. & Stochastic Calc & Very High & Quant Finance / Risk Management. \\
+    \addlinespace
+    UChicago & \href{https://finmath.uchicago.edu/}{Mathematical Finance} & Graduate & Arbitrage theory, Derivatives, Stochastic Calculus (Black-Scholes). & Stochastic Calc, Measure Theory & Very High & Quant Trading / "Chicago School" rigor. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/}{15.401 Finance Theory I} & Graduate & Valuation of assets, capital budgeting, risk management, and CAPM. & Microeconomics & Moderate & Corporate Finance / Investment Banking. \\
+    \addlinespace
+    MIT & \href{MIT Learn/OCW entry for 18.S096 with finance applications.}{18.S096 Topics in Mathematics with Applications in Finance} & Graduate / advanced undergraduate (Set A) & Mathematical finance mini-course covering stochastic calculus tools like Itô’s lemma and their application to option pricing (Black–Scholes, etc.). & Probability theory; calculus; some exposure to stochastic processes is helpful. & Very High. & Quantitative finance, risk management, further study of Shreve’s books and related material. \\
+    \addlinespace
+    WorldQuant & \href{https://www.wqu.edu/}{MSc in Financial Engineering} & Graduate & Comprehensive Tuition-Free degree. Econometrics, Pricing, ML for Finance. & Bachelor's, Python & High & Full project-based Master's curriculum. \\
+    \addlinespace
+    Imperial / NYU & \href{https://engineering.nyu.edu/academics/programs/fintech-ms}{FinTech} & Graduate & Banking Regulation, Monetary Policy, Blockchain, RegTech. & Finance / ML & High & Integration of legal/regulatory frameworks (Basel III). \\
+    \addlinespace
+    MIT / NYU & \href{https://ocw.mit.edu/courses/15-433-financial-markets-fall-2008/}{15.433 Market Microstructure} & Graduate & Limit order books, HFT algorithms, liquidity. How price is formed. & Finance Theory & High & "The plumbing of the market." HFT. \\
+    \addlinespace
+    Goldman Sachs & \href{https://developer.gs.com/docs/quant/}{GS Quant} & Graduate & Documentation on the models used by the bank. & Fin Math, Python & High & Applied Math/Python resource. \\
+
+\end{longtable}
+
+\newpage
+
+\section*{Set B: Undergrad Level}
+\textit{Subjects: EE, MechE, ChemE, General Eng, CompE, Stats, DS, AI, Intro CS.}
+
+\begin{longtable}{L{2cm} L{3.5cm} L{1.8cm} L{6cm} L{3.5cm} L{2cm} L{5cm}}
+    \caption{Undergraduate Engineering and Computer Science}\\
+    \toprule
+    \textbf{Institute} & \textbf{Course Name} & \textbf{Level} & \textbf{Summary} & \textbf{Prerequisites} & \textbf{Hardness} & \textbf{Leads To / Info} \\
+    \midrule
+    \endhead
+    
+    % --- SECTION 1: ENGINEERING ---
+    \multicolumn{7}{l}{\textbf{\color{headerblue}1. Engineering (EE, MechE, ChemE, CompE)}} \\
+    \midrule
+    MIT & \href{MIT OCW page for 6.002 Circuits and Electronics.}{6.002 Circuits and Electronics} & Lower/upper-division undergraduate (Set B) & Foundational circuits course introducing lumped element models, op-amps, diodes, transistors, and basic analog/digital circuit design. & Single-variable calculus; basic physics (electricity and magnetism). & Medium–High. & Electronics, embedded systems, power electronics, analog design. \\
+    \addlinespace
+    UC Berkeley & \href{https://inst.eecs.berkeley.edu/~ee105/}{EE105} / \href{https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/}{MIT 6.012} & Upper Undergrad & Transistors, MOSFETS, amplifiers. The silicon substrate. & Calculus, Complex \#s & Very High & Chip Design (Apple/NVIDIA). Hardware layer of AI. \\
+    \addlinespace
+    MIT & \href{MIT OCW page for 6.111.}{6.111 Introductory Digital Systems Laboratory} & Upper-division undergraduate (Set B) & Digital logic and FPGA-based systems design lab; older versions use outdated tools, recommended mainly for boolean logic theory. & Intro digital logic / basic circuits; some Verilog/VHDL helps. & High (lab intensive). & FPGA design, embedded digital systems, follow-on with Cornell ECE 5760 for modern toolchains. \\
+    \addlinespace
+    Cornell University & \href{https://ocw.ece.cornell.edu/courses/ece-5760-advanced-microcontroller-design-and-system-on-chip/}{ECE 5760 Advanced Microcontroller Design and System-on-Chip} & Graduate / advanced undergraduate (Set B) & Hands-on FPGA/System-on-Chip design using modern tools; students build embedded systems on DE1-SoC boards with custom peripherals and real-time OS. & Undergraduate digital design and some embedded systems experience. & High. & FPGA/SoC design roles; embedded systems engineering. \\
+    \addlinespace
+    Cornell & \href{https://ocw.ece.cornell.edu/courses/ece-4760-designing-with-microcontrollers/}{ECE 4760 Microcontrollers} & Undergrad & Real-time embedded systems (PIC32/RP2040). Interrupts, bare-metal C. & Circuits, C & High & Embedded Systems / Robotics. \\
+    \addlinespace
+    Purdue & \href{https://www.youtube.com/watch?v=ucF468EPOK4}{Semiconductor Fundamentals} & Undergrad & Fermi-Dirac statistics to macroscopic I-V curves. Transistor physics. & Physics, Calc & Moderate & Device Physics / Nanoelectronics. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/}{6.003} / Berkeley EE120 & Undergrad & Fourier Transforms, Sampling Theory. Signals in frequency domain. & Calculus & Moderate & DSP, Communications. Raw data processing before ML. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/2-003j-dynamics-and-control-i-fall-2007/}{2.003 Dynamics \& Control} & Upper Undergrad & Laplace transforms, PID control, Bode plots. Math of movement/stability. & Physics, Diff Eq & High & Robotics / Aviation. Ensuring systems don't destroy themselves. \\
+    \addlinespace
+    Oxford & \href{https://podcasts.ox.ac.uk/series/oxford-solid-state-basics}{Solid State Basics} & Undergrad & Drude/Sommerfeld theories, band theory, tight-binding models. & QM Basics & Moderate & Semiconductor Engineering. \\
+    \addlinespace
+    NPTEL & \href{https://nptel.ac.in/courses/103103026}{Chemical Kinetics} & Undergrad & Reaction mechanisms, rate expressions, reactor design. & Thermodynamics & High & Process Engineering. \\
+    \addlinespace
+    CMU & \href{https://oli.cmu.edu/courses/stoichiometry-open-free/}{Stoichiometry} & Undergrad & Mass relations, chemical formulas, reaction balancing. & Algebra & Moderate & Fundamental quantitative chemistry. \\
+    \addlinespace
+    Harvard & \href{https://pll.harvard.edu/course/principles-biochemistry}{Principles of Bioengineering} & Undergrad & Macromolecule structure, enzyme kinetics, cellular pathways. & Intro Bio, Chem & Moderate & Bioengineering / Biotech. \\
+    \addlinespace
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/}{3.091 Material Science} & Undergrad & Atomic structure, bonding, crystallography. & Chemistry, Physics & Moderate & Hardware Eng. Why we use Silicon for chips and Lithium for batteries. \\
+    \addlinespace
+    UC Davis & \href{https://www.youtube.com/playlist?list=PLGvfHSglmk4aweyWIhMxrLrFHL4L25xWW}{Intro to CUDA C++} & Upper Undergrad & Replaces NVIDIA Docs. Theory of massive parallelism, GPU hardware logic. & C/C++ & High & HPC / Supercomputing. \\
+
+    % --- SECTION 2: STATISTICS & DATA SCIENCE ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}2. Statistics, Data Science, \& Econometrics}} \\
+    \midrule
+    Harvard & \href{https://projects.iq.harvard.edu/stat110/home}{Stat 110: Intro to Probability} & Upper Undergrad & Logic of uncertainty, Markov chains, Poisson processes. & Calculus (strong) & High & Advanced ML intuition-building. Famous for difficulty. \\
+    \addlinespace
+    CMU & \href{https://oli.cmu.edu/courses/probability-statistics-open-free/}{Probability \& Statistics} & Undergrad & Exploratory data analysis, probability, statistical inference. & High school algebra & Moderate & Producing data reasoning. Self-paced. \\
+    \addlinespace
+    Harvard & \href{https://pll.harvard.edu/course/data-science-linear-regression}{Data Science: Linear Regression} & Undergrad & Theory behind linear regression, confounding, bias-variance. & Stats, Calculus & Moderate & Inference-heavy approach to DS. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/14-32-econometrics-spring-2007/}{14.32 Econometrics} & Upper Undergrad & Causal inference from observational data. Instrumental variables. & Statistics (Stat 110) & High & Differentiates "Data Science" from "Economics" (causality). \\
+    \addlinespace
+    UChicago & \href{https://price-theory.uchicago.edu/}{Price Theory (Becker)} & Graduate* & Chicago School approach to microeconomics. Classic archives. & Calculus & High & Fundamental economic theory. \\
+    \addlinespace
+    Yale & \href{https://oyc.yale.edu/economics/econ-252}{Behavioral Finance (Shiller)} & Upper Undergrad & Explores why "Rational Agent" theory often fails (bubbles, crashes). & Microeconomics & Moderate & Asset Management. Check on efficient market hypothesis. \\
+
+    % --- SECTION 3: COMPUTER SCIENCE ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}3. Computer Science (Intro, Theory, AI)}} \\
+    \midrule
+    Carnegie Mellon University & \href{https://15445.courses.cs.cmu.edu/2025/}{15-445/645 Introduction to Database Systems} & Upper-division undergraduate / graduate (Set B) & Modern database systems course (Andy Pavlo); covers storage layouts, indexing, query execution, concurrency control, logging, and modern OLAP/OLTP architectures. & Systems programming (C/C++), data structures; basic OS concepts. & High. & Database engine development, data infrastructure roles, large-scale data systems work. \\
+    \addlinespace
+    MIT & \href{https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/}{6.006 Introduction to Algorithms} & Undergraduate (Set B) & Core algorithms course; asymptotic analysis, sorting, data structures, dynamic programming, and graph algorithms, with updated 2020 video set. & Discrete math; basic programming (Python/Java/C++). & High. & Advanced algorithms, competitive programming, systems and ML engineering. \\
+    \addlinespace
+    Princeton & \href{https://www.coursera.org/learn/algorithms-part1}{Algorithms (Sedgewick)} & Undergrad & Data structures, graph algorithms, correctness proofs. & Java / Basic Math & Moderate & Industry benchmark for theory. \\
+    \addlinespace
+    \addlinespace
+    CMU & \href{https://15445.courses.cs.cmu.edu/}{15-445 Database Systems} & Undergrad & DBMS internals: storage, buffer pools, query optimization, concurrency. & C++, Systems & High & Performance Engineering / Systems Programming. \\
+    \addlinespace
+    CMU & \href{https://oli.cmu.edu/courses/principles-of-computing-open-free/}{Principles of Computing} & Undergrad & Iteration, recursion, representations, complexity basics. & None & Moderate & CS Major core. \\
+    \addlinespace
+    CMU & \href{https://oli.cmu.edu/courses/logic-proofs-open-free/}{Logic \& Proofs} & Undergrad & Critical for CS/AI. Sentential/Quantificational logic, validity. & None & Moderate & Theoretical backbone of CS. \\
+    \addlinespace
+    JHU & \href{https://www.coursera.org/learn/comparch}{Computer System Fundamentals} & Undergrad & Core computer organization and system architecture. & None & Moderate & Systems Engineering. \\
+    \addlinespace
+    NUS & \href{https://nusmods.com/courses/CS2100/computer-organisation}{Computer Organization} & Undergrad & Hardware/software interface, memory hierarchy, assembly. & Intro CS & High & Computer Engineering (CompE). \\
+    \addlinespace
+    UC Berkeley & \href{https://inst.eecs.berkeley.edu/~cs188/}{CS 188: Intro to AI} & Upper Undergrad & Search, constraint satisfaction, game theory, MDPs. & CS 61A/B, Math & High & Advanced AI / Robotics. Focuses on math of intelligence (Agents). \\
+    \addlinespace
+    Microsoft & \href{https://github.com/microsoft/generative-ai-for-beginners}{Generative AI for Beginners} & Beginner & Prompt Engineering, LangChain, API usage. Build GenAI apps. & Python & Low & Practical Application of LLMs. \\
+    \addlinespace
+    NUS & \href{https://nusmods.com/courses/CS3243/introduction-to-artificial-intelligence}{CS3243 Intro to AI} & Undergrad & State Space search, minimax, logical agents, probabilistic reasoning. & Data Structures & High & AI Knowledge representation. \\
+    \addlinespace
+    Google & \href{https://developers.google.com/machine-learning/crash-course}{ML Crash Course} & Undergrad & Intro to ML: regression, loss functions, gradient descent. & Basic Algebra & Low & Applied ML. Focuses on usage, not theory. \\
+    \addlinespace
+    \addlinespace
+    NUS & \href{https://nusmods.com/courses/CS4268/quantum-computing}{CS4268 Quantum Computing} & Upper Undergrad & QM for CS, quantum algorithms (Shor/Grover), complexity. & Linear Algebra & High & Bridges Quantum Mechanics and CS. \\
+    \addlinespace
+    Microsoft & \href{https://learn.microsoft.com/en-us/training/paths/quantum-computing-fundamentals/}{Quantum Foundations} & Undergrad & Qubits, superposition, entanglement, Q\# implementation. & Matrix Algebra & Moderate & Quantum Software Engineering. \\
+    \addlinespace
+    Microsoft & \href{https://learn.microsoft.com/en-us/ai/responsible-ai-dashboard}{Responsible AI} & Undergrad & Theory of bias, fairness, transparency in algorithmic systems. & None & Low & AI Policy / Governance. \\
+    \addlinespace
+    JPMorgan & \href{https://www.jpmorgan.com/technology/artificial-intelligence}{Tech Research / Crypto} & Upper Undergrad & Papers on blockchain, quantum algos, zero-knowledge proofs. & CS/Finance Basics & Variable & Industry insights on Trust engineering. \\
+    \addlinespace
+    Yale & \href{https://oyc.yale.edu/economics/econ-159}{Game Theory} & Upper Undergrad & Strategic interaction. Nash Equilibrium, Mechanism Design. & Calculus, Prob & Moderate & Strategy for Economics and Blockchain. \\
+    \addlinespace
+    Monit Sharma & \href{https://github.com/MonitSharma/Quantum-Machine-Learning}{Quantum Machine Learning} & Undergrad & Quantum kernels, variational classifiers, QML algorithms. & Python, Lin Alg & Moderate & Bridge between Quantum and ML. \\
+
+    % --- SECTION 4: APPLIED MATH / LIN ALG ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}4. Applied Math / Linear Algebra (Undergrad)}} \\
+    \midrule
+    Stanford & \href{https://explorecourses.stanford.edu/search?q=CME+100}{CME 100 Vector Calculus} & Undergrad & Green's, Stokes', and Divergence theorems for engineers. & Calculus & Moderate & Geometric intuition for fluid/electro fields. \\
+    \addlinespace
+    \addlinespace
+    Harvey Mudd & \href{https://www.youtube.com/playlist?list=PL0E754696F72137EC}{Real Analysis (Francis Su)} & Undergrad & Construction of Real numbers, series, continuity. & Calculus & High & Analysis / Applied Math. Theoretical underpinnings. \\
+    \addlinespace
+    TU Delft & \href{https://online-learning.tudelft.nl/courses/mathematical-modeling-basics/}{Mathematical Modeling} & Undergrad & Complete modeling cycle: formulation, numerical solving (Euler), validation. & Calculus & Moderate & Practical Engineering Modeling vs pure analysis. \\
+    \addlinespace
+    Cambridge & \href{https://www.damtp.cam.ac.uk/user/tong/vector.html}{Vector Calculus} & Undergrad & Integration in R3, Stokes' Theorem, Tensors, Curvilinear coords. & Calculus & Moderate & Fluid Dynamics / Electromagnetism. \\
+    \addlinespace
+    Yale & \href{https://oyc.yale.edu/physics/phys-200}{Fundamentals of Physics (Shankar)} & Undergrad & Bridge between conceptual and analytical physics. & Calculus & Moderate & Physics Major Newtonian mechanics through QM. \\
+
+    % --- SECTION 5: BANKING & LOGISTICS ---
+    \midrule
+    \multicolumn{7}{l}{\textbf{\color{headerblue}5. Banking \& Logistics}} \\
+    \midrule
+    Barnard & \href{https://www.coursera.org/learn/money-banking}{Economics of Money} & Undergrad & The "Money View": Eurodollars, Repo, Central Bank as Dealer. & Intro Econ & Moderate & Banking Operations engineer. Perry Mehrling. \\
+    \addlinespace
+    Princeton & \href{https://online.princeton.edu/bitcoin-and-cryptocurrency-technologies}{Bitcoin \& Crypto Tech} & Undergrad & Deconstruction of blockchain: Hash pointers, Merkle trees, PoW consensus. & Algos, Crypto & Moderate & DeFi / Blockchain Engineering. \\
+    \addlinespace
+    LSE & \href{https://www.lse.ac.uk/study-at-lse/Summer-Schools/Summer-School/Courses/Finance/FM250}{Principles of Banking} & Undergrad & Core principles of financial intermediation and logistics. & Algebra / Calc & Moderate & Corporate Banking / Supply Chain Analyst. \\
+    \addlinespace
+    Michigan & \href{https://www.coursera.org/specializations/supply-chain-management}{Supply Chain Management} & Undergrad & Integrated logistics strategy with quantitative operations. & Logistics & Moderate & Supply Chain Logistics. \\
+    \addlinespace
+    Wharton & \href{https://platform.onlinelearning.upenn.edu/offering/introduction-to-corporate-finance}{Intro to Corporate Finance} & Undergrad & Decision making within firms: Capital budgeting, ROI, Cost of Capital. & Accounting & Moderate & Financial Analyst Core. \\
+    \addlinespace
+    Yale & \href{https://online.yale.edu/courses/financial-markets}{Financial Markets (Shiller)} & Undergrad & Institutions, behavioral finance, risk management, and insurance. & Microecon & Moderate & General Finance Overview. \\
+
+    \bottomrule
+\end{longtable}
+
+\end{document}

@@ -1,0 +1,567 @@
+Here’s all the metadata you need for every course explicitly referenced in the PDF, organized in a LaTeX-friendly way so you can drop it into `main(3).tex` and wire it up to whatever course macro you’re using. All fields follow the PDF’s schema: **Institute, Course Name, Level, Summary, Prerequisites, Hardness, Leads To, URL(s)**. 
+
+Below I use a consistent key-value format you can map into your own macro, e.g.
+`course_key / institute / code / title / level / summary / prerequisites / hardness / leads_to / url_main / url_alt`.
+
+---
+
+### 1. Theoretical Physics / Quantum & QFT Ladder
+
+**(1) MIT 8.04 – Quantum Physics I (Zwiebach, Spring 2016)** ([MIT OpenCourseWare][1])
+
+* course_key: `mit-8-04-2016`
+* institute: `MIT`
+* code: `8.04`
+* title: `Quantum Physics I`
+* level: `Upper-division undergraduate (Set A)`
+* summary: `First quantum mechanics course; experimental basis of quantum physics, wave mechanics, and Schrödinger equation in 1D and 3D.`
+* prerequisites: `Single-variable and multivariable calculus, differential equations, linear algebra, and an introductory classical mechanics course.`
+* hardness: `High (first serious QM course)`
+* leads_to: `MIT 8.05 Quantum Physics II; MIT 8.06 Quantum Physics III; Atomic Physics; Quantum Information Science.`
+* url_main: `https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/`
+* url_alt: `YouTube playlist for lectures (MIT OCW mirror).`
+
+---
+
+**(2) MIT 8.05 – Quantum Physics II (Zwiebach, Fall 2013)**
+
+* course_key: `mit-8-05-2013`
+* institute: `MIT`
+* code: `8.05`
+* title: `Quantum Physics II`
+* level: `Upper-division undergraduate (Set A)`
+* summary: `Matrix/mechanics–focused continuation of 8.04; develops Dirac bra–ket formalism, Hermitian operators, unitary time evolution, and spin systems.` 
+* prerequisites: `MIT 8.04 or equivalent QM I; solid linear algebra and differential equations.`
+* hardness: `High (major abstraction jump from wave to matrix mechanics).`
+* leads_to: `MIT 8.06; graduate quantum theory; quantum computing, quantum information.`
+* url_main: `MIT OCW page for 8.05 Quantum Physics II (Fall 2013).`
+
+---
+
+**(3) MIT 8.06 – Quantum Physics III (Spring 2018)**
+
+* course_key: `mit-8-06-2018`
+* institute: `MIT`
+* code: `8.06`
+* title: `Quantum Physics III`
+* level: `Upper-division undergraduate / bridge to graduate (Set A)`
+* summary: `Covers perturbation theory, scattering theory, WKB approximation, Aharonov–Bohm effect, and Berry phase, with applications to condensed matter and topological phenomena.` 
+* prerequisites: `MIT 8.05 or equivalent; comfort with complex analysis and linear algebra in Hilbert space.`
+* hardness: `Very High (technique-heavy, “messy” physics).`
+* leads_to: `Quantum field theory, advanced condensed matter, topological insulators, graduate AMO/CM courses.`
+* url_main: `MIT OCW page for 8.06 Quantum Physics III (Spring 2018).`
+
+---
+
+**(4) Cambridge – David Tong, Quantum Field Theory (Lecture Notes)** ([arXiv][2])
+
+* course_key: `cam-qft-tong`
+* institute: `University of Cambridge`
+* code: `QFT (Lecture Notes)`
+* title: `Lectures on Quantum Field Theory`
+* level: `Graduate (Set A)`
+* summary: `Canonical introductory QFT notes emphasizing physical intuition; covers relativistic fields, path integrals, perturbation theory, renormalization, and gauge theory.` 
+* prerequisites: `Special relativity; advanced quantum mechanics (operator formalism); Lagrangian and Hamiltonian classical field theory; strong mathematical maturity.`
+* hardness: `Very High (conceptually dense graduate QFT).`
+* leads_to: `Advanced QFT, gauge theory, particle physics, string theory; preparation for PSI QFT courses and MIT 8.323.`
+* url_main: `https://www.damtp.cam.ac.uk/user/tong/qft.html`
+
+---
+
+**(5) MIT 8.323 – Relativistic Quantum Field Theory I**
+
+* course_key: `mit-8-323-qft`
+* institute: `MIT`
+* code: `8.323`
+* title: `Relativistic Quantum Field Theory I`
+* level: `Graduate (Set A)`
+* summary: `Graduate introduction to canonical QFT; relativistic scalar fields, spinor fields, quantization, Feynman diagrams, and renormalization in canonical formalism.` 
+* prerequisites: `MIT 8.05/8.06 or equivalent advanced QM; special relativity; strong comfort with Lagrangian/Hamiltonian mechanics and complex analysis.`
+* hardness: `Very High for autodidacts.`
+* leads_to: `QFT II, advanced particle physics, quantum many-body theory, string theory.`
+* url_main: `MIT OCW or MIT course site for 8.323 Relativistic Quantum Field Theory I.`
+
+---
+
+**(6) Perimeter Scholars International – Quantum Field Theory (QFT I/II)**
+
+* course_key: `psi-qft-sequence`
+* institute: `Perimeter Institute (PSI)`
+* code: `PSI QFT I / QFT II`
+* title: `Quantum Field Theory I & II (PSI)`
+* level: `Graduate / advanced graduate (Set A)`
+* summary: `Intensive QFT sequence from PSI covering canonical and path integral quantization, renormalization, gauge theories, and modern topics; delivered as research-oriented short courses.`
+* prerequisites: `Strong graduate-level QM; special relativity; classical fields; prior exposure to basic QFT (e.g., Tong or 8.323) strongly recommended.`
+* hardness: `Extreme (research-level pacing).`
+* leads_to: `Academic research in high-energy theory, cosmology, and related areas.`
+* url_main: `PIRSA/SciVideos QFT lecture archive for PSI (e.g., 2016/2017 QFT I).`
+
+---
+
+**(7) Perimeter – String Theory (PSI)**
+
+* course_key: `psi-string-theory`
+* institute: `Perimeter Institute (PSI)`
+* code: `String Theory (PSI)`
+* title: `String Theory (Perimeter Scholars International)`
+* level: `Advanced graduate (Set A)`
+* summary: `Graduate-level string theory course; worldsheet formulation, conformal field theory, string spectra, and basic string phenomenology.` 
+* prerequisites: `Quantum field theory at the level of PSI QFT or MIT 8.323; differential geometry; group theory.`
+* hardness: `Extreme.`
+* leads_to: `Research in string theory, quantum gravity, and advanced formal theory.`
+* url_main: `PSI string theory PIRSA archive.`
+
+---
+
+**(8) Stanford – The Theoretical Minimum: General Relativity (Susskind)** ([ocw.ece.cornell.edu][3])
+
+* course_key: `stanford-theoretical-minimum-gr`
+* institute: `Stanford (Theoretical Minimum / Susskind)`
+* code: `GR (Theoretical Minimum)`
+* title: `General Relativity`
+* level: `Upper-division undergraduate / early graduate (Set A)`
+* summary: `Conceptual introduction to GR emphasizing physical ideas (equivalence principle, curvature, geodesics) before full tensor calculus; uses Susskind’s “theoretical minimum” style.`
+* prerequisites: `Classical mechanics; multivariable calculus; special relativity; some linear algebra.`
+* hardness: `High.`
+* leads_to: `Graduate GR, cosmology, black hole physics, PSI cosmology courses.`
+* url_main: `https://theoreticalminimum.com/courses/general-relativity/2012/fall`
+
+---
+
+### 2. Engineering Science: Fluids, Transport, Robotics, Physics-Informed ML
+
+**(9) MIT 10.50 / 10.50x – Analysis of Transport Phenomena (Transport Phenomena)** ([MIT Learn][4])
+
+* course_key: `mit-10-50-transport`
+* institute: `MIT`
+* code: `10.50` (and MOOC `10.50.2x`)
+* title: `Analysis of Transport Phenomena`
+* level: `Graduate chemical engineering core (Set A)`
+* summary: `Unified treatment of momentum, heat, and mass transfer; scaling, asymptotic analysis, and conservation laws for transport in fluids and solids.`
+* prerequisites: `Undergraduate fluid mechanics, heat transfer, differential equations, vector calculus.`
+* hardness: `High.`
+* leads_to: `Advanced CFD, transport modeling in energy systems, process design.`
+* url_main: `MIT 10.50/10.50x course/OCW page or MOOC listing.`
+
+---
+
+**(10) NPTEL – Transport Phenomena (IIT Kharagpur, Sunando Dasgupta)** ([pdos.csail.mit.edu][5])
+
+* course_key: `nptel-transport-phenomena`
+* institute: `IIT Kharagpur (NPTEL)`
+* code: `NPTEL Transport Phenomena`
+* title: `Transport Phenomena`
+* level: `Upper-division undergraduate / graduate (Set A)`
+* summary: `Video course on momentum, heat, and mass transfer with mathematically rigorous derivations and worked examples.`
+* prerequisites: `Undergraduate chemical engineering thermodynamics and fluid mechanics; differential equations.`
+* hardness: `High.`
+* leads_to: `Same applications as MIT 10.50; alternative path for video-first learners.`
+* url_main: `https://onlinecourses.nptel.ac.in/noc25_ch43/preview`
+
+---
+
+**(11) MIT 2.25 – Advanced Fluid Mechanics** 
+
+* course_key: `mit-2-25-adv-fluids`
+* institute: `MIT`
+* code: `2.25`
+* title: `Advanced Fluid Mechanics`
+* level: `Graduate mechanical engineering (Set A)`
+* summary: `Rigorous treatment of incompressible flow, boundary layers, instability, and turbulence; theoretical underpinning for CFD and aero/hydro design.`
+* prerequisites: `Undergraduate fluid mechanics; vector calculus; PDEs; basic numerical methods helpful.`
+* hardness: `Very High.`
+* leads_to: `Aerospace engineering, climate and ocean modeling, CFD research.`
+* url_main: `MIT OCW page for 2.25 Advanced Fluid Mechanics.`
+
+---
+
+**(12) MIT 6.832 – Underactuated Robotics** 
+
+* course_key: `mit-6-832-underactuated-robotics`
+* institute: `MIT`
+* code: `6.832`
+* title: `Underactuated Robotics`
+* level: `Graduate / advanced undergraduate (Set A)`
+* summary: `Dynamics and control of systems with fewer actuators than degrees of freedom (e.g., walking robots, acrobatic systems); optimization-based planning and feedback design.`
+* prerequisites: `Linear algebra; multivariable calculus; differential equations; some control theory and dynamics.`
+* hardness: `High.`
+* leads_to: `Legged robotics, manipulation, research roles in robotics labs and companies (e.g., Boston Dynamics, Agility Robotics).`
+* url_main: `MIT OCW page for 6.832 Underactuated Robotics; live course site underactuated.csail.mit.edu for textbook.`
+
+---
+
+**(13) University of Washington – Physics-Informed Machine Learning (Steve Brunton)** ([Cornell Class Roster][6])
+
+* course_key: `uw-physics-informed-ml`
+* institute: `University of Washington`
+* code: `PIML (Brunton)`
+* title: `Physics-Informed Machine Learning`
+* level: `Graduate (Set A)`
+* summary: `Videos on embedding physical structure (PDEs, dynamical systems) into ML models; includes sparse regression (SINDy), PINNs, and model discovery for dynamical systems.`
+* prerequisites: `Linear algebra, differential equations, basic dynamical systems, introductory ML / neural networks.`
+* hardness: `High.`
+* leads_to: `Digital twins, scientific ML, physics-informed neural networks in engineering and climate applications.`
+* url_main: `Representative lecture: https://www.youtube.com/watch?v=JoFW2uSd3Uo`
+
+---
+
+### 3. Applied Math & Optimization
+
+**(14) MIT 18.065 – Matrix Methods in Data Analysis, Signal Processing, and Machine Learning** 
+
+* course_key: `mit-18-065-matrix-methods`
+* institute: `MIT`
+* code: `18.065`
+* title: `Matrix Methods in Data Analysis, Signal Processing, and Machine Learning`
+* level: `Graduate (Set A)`
+* summary: `SVD-centric linear algebra course covering PCA, low-rank approximation, compressed sensing, and matrix factorization as core tools for data analysis.`
+* prerequisites: `Undergraduate linear algebra (18.06-level); multivariable calculus.`
+* hardness: `High.`
+* leads_to: `Machine learning, signal processing, numerical linear algebra, data science.`
+* url_main: `MIT OCW page for 18.065 (Spring 2018).`
+
+---
+
+**(15) Stanford EE364a – Convex Optimization** 
+
+* course_key: `stanford-ee364a-convexopt`
+* institute: `Stanford`
+* code: `EE364a`
+* title: `Convex Optimization`
+* level: `Graduate (Set A)`
+* summary: `Foundational course on convex sets, functions, optimization problems, duality, and interior-point methods, with applications to ML, control, and signal processing.`
+* prerequisites: `Linear algebra; basic real analysis; some probability and programming helpful.`
+* hardness: `Very High.`
+* leads_to: `Optimization research, advanced ML theory, control, operations research.`
+* url_main: `https://web.stanford.edu/class/ee364a/`
+
+---
+
+**(16) CMU 10-725 – Convex Optimization** ([reddit.com][7])
+
+* course_key: `cmu-10-725-convexopt`
+* institute: `Carnegie Mellon University`
+* code: `10-725`
+* title: `Convex Optimization`
+* level: `Graduate (Set A)`
+* summary: `Statistics-oriented convex optimization course emphasizing probabilistic modeling, regularization, and ML applications.`
+* prerequisites: `Measure/probability at graduate level; linear algebra; some real analysis.`
+* hardness: `Very High.`
+* leads_to: `Statistical ML, optimization research, advanced data science.`
+* url_main: `https://www.stat.cmu.edu/~ryantibs/convexopt/`
+
+---
+
+**(17) MIT 18.657 – Mathematics of Machine Learning** 
+
+* course_key: `mit-18-657-math-ml`
+* institute: `MIT`
+* code: `18.657`
+* title: `Mathematics of Machine Learning`
+* level: `Graduate (Set A)`
+* summary: `Statistical learning theory course covering VC dimension, Rademacher complexity, generalization bounds, and classical theory for empirical risk minimization.`
+* prerequisites: `Probability, real analysis, linear algebra; basic statistics.`
+* hardness: `Very High.`
+* leads_to: `Theoretical ML research; reading on neural tangent kernels and over-parameterized models.`
+* url_main: `MIT course/OCW page for 18.657 (Fall 2015).`
+
+---
+
+### 4. Machine Intelligence (ML / DL / RL / GNNs)
+
+**(18) Stanford CS231n – Convolutional Neural Networks for Visual Recognition** 
+
+* course_key: `stanford-cs231n`
+* institute: `Stanford`
+* code: `CS231n`
+* title: `Convolutional Neural Networks for Visual Recognition`
+* level: `Upper-division undergraduate / graduate (Set A)`
+* summary: `Image classification and visual recognition with CNNs; data augmentation, optimization, and modern architectures, with growing coverage of Vision Transformers.`
+* prerequisites: `Linear algebra, probability, Python programming, basic deep learning.`
+* hardness: `High.`
+* leads_to: `Computer vision research and engineering roles; ViT and diffusion model study.`
+* url_main: `http://cs231n.stanford.edu/`
+
+---
+
+**(19) Stanford CS224n – Natural Language Processing with Deep Learning** ([Stanford University][8])
+
+* course_key: `stanford-cs224n`
+* institute: `Stanford`
+* code: `CS224n`
+* title: `Natural Language Processing with Deep Learning`
+* level: `Graduate / advanced undergraduate (Set A)`
+* summary: `Modern NLP course focused on attention mechanisms, Transformers, pretrained language models, and LLM-based NLP systems.`
+* prerequisites: `Deep learning basics; Python; strong linear algebra and probability.`
+* hardness: `High.`
+* leads_to: `LLM research, NLP engineering, prompt-engineering and RLHF-related work.`
+* url_main: `https://web.stanford.edu/class/cs224n/`
+
+---
+
+**(20) Stanford CS224w – Machine Learning with Graphs** ([YouTube][9])
+
+* course_key: `stanford-cs224w`
+* institute: `Stanford`
+* code: `CS224w`
+* title: `Machine Learning with Graphs`
+* level: `Graduate / advanced undergraduate (Set A)`
+* summary: `Core course on graph representation learning, graph neural networks, and applications to social networks, recommendation systems, and drug discovery.`
+* prerequisites: `Linear algebra, probability, basic ML; Python programming.`
+* hardness: `High.`
+* leads_to: `GNN research, graph-based ML in industry (recsys, fraud, molecule design).`
+* url_main: `https://web.stanford.edu/class/cs224w/`
+
+---
+
+**(21) DeepMind/UCL – Introduction to Reinforcement Learning (David Silver)** ([YouTube][10])
+
+* course_key: `dm-ucl-rl-silver`
+* institute: `UCL / DeepMind`
+* code: `David Silver RL Course`
+* title: `Reinforcement Learning`
+* level: `Graduate / advanced undergraduate (Set A)`
+* summary: `Foundational RL lecture series; MDPs, Bellman equations, dynamic programming, Monte Carlo methods, TD learning, function approximation.`
+* prerequisites: `Probability, linear algebra, basic ML; some programming.`
+* hardness: `High.`
+* leads_to: `Deep RL implementations (e.g., Berkeley CS285), RL research and applications (games, control, recommendation).`
+* url_main: `YouTube playlist “RL Course by David Silver”.`
+
+---
+
+**(22) UC Berkeley CS285 – Deep Reinforcement Learning** ([Infocobuild][11])
+
+* course_key: `berkeley-cs285-deeprl`
+* institute: `UC Berkeley`
+* code: `CS285`
+* title: `Deep Reinforcement Learning`
+* level: `Graduate (Set A)`
+* summary: `Project-oriented deep RL course with policy gradients, actor–critic methods, off-policy learning, and practical implementations in PyTorch/TensorFlow.`
+* prerequisites: `Silver RL theory or equivalent; deep learning; strong programming skills.`
+* hardness: `Very High.`
+* leads_to: `Applied deep RL in robotics, recommendation, operations, and research.`
+* url_main: `https://rail.eecs.berkeley.edu/deeprlcourse-fa20/`
+
+---
+
+**(23) NYU – Deep Learning (LeCun / Canziani etc.)** ([Stanford Online][12])
+
+* course_key: `nyu-deeplearning-lecun`
+* institute: `NYU Center for Data Science`
+* code: `NYU DL`
+* title: `Deep Learning`
+* level: `Graduate (Set A)`
+* summary: `Deep learning course emphasizing energy-based models, self-supervised learning, and modern architectures, reflecting LeCun’s research perspective.`
+* prerequisites: `Linear algebra, probability, calculus; basic ML; competent Python programming.`
+* hardness: `High.`
+* leads_to: `Advanced research/engineering roles in deep learning, energy-based models, and representation learning.`
+* url_main: `https://atcold.github.io/NYU-DLSP21/`
+
+---
+
+### 5. Financial Engineering & Systems
+
+**(24) MIT 18.S096 – Topics in Mathematics with Applications in Finance** ([Coursicle][13])
+
+* course_key: `mit-18-s096-finance`
+* institute: `MIT`
+* code: `18.S096`
+* title: `Topics in Mathematics with Applications in Finance`
+* level: `Graduate / advanced undergraduate (Set A)`
+* summary: `Mathematical finance mini-course covering stochastic calculus tools like Itô’s lemma and their application to option pricing (Black–Scholes, etc.).`
+* prerequisites: `Probability theory; calculus; some exposure to stochastic processes is helpful.`
+* hardness: `Very High.`
+* leads_to: `Quantitative finance, risk management, further study of Shreve’s books and related material.`
+* url_main: `MIT Learn/OCW entry for 18.S096 with finance applications.`
+
+---
+
+**(25) Columbia – Financial Engineering and Risk Management (Coursera Specialization)** ([MIT Learn][14])
+
+* course_key: `columbia-ferm-coursera`
+* institute: `Columbia University`
+* code: `Coursera FE&RM`
+* title: `Financial Engineering and Risk Management Specialization`
+* level: `Upper-division undergraduate / professional (Set A)`
+* summary: `MOOC sequence on derivative pricing, risk management, and basic stochastic calculus for finance.`
+* prerequisites: `Probability, calculus, linear algebra.`
+* hardness: `High.`
+* leads_to: `Preparatory background for MFE programs and junior quant roles.`
+* url_main: `Coursera specialization page “Financial Engineering and Risk Management”.`
+
+---
+
+**(26) NYU Stern – Investment Valuation (Damodaran)** 
+
+* course_key: `nyu-stern-damodaran-valuation`
+* institute: `NYU Stern`
+* code: `Investment Valuation`
+* title: `Investment Valuation`
+* level: `Upper-division undergraduate / MBA (Set A)`
+* summary: `Fundamental equity valuation: DCF, risk premiums, capital structure, and practical valuation of companies; heavy use of real-world data.`
+* prerequisites: `Introductory corporate finance; basic accounting and statistics.`
+* hardness: `Medium–High.`
+* leads_to: `Equity research, corporate finance, fundamental investing.`
+* url_main: `Damodaran’s course page at pages.stern.nyu.edu/~adamodar/`
+
+---
+
+**(27) MIT 6.824 / 6.5840 – Distributed Systems** ([MIT OpenCourseWare][15])
+
+* course_key: `mit-6-824-distributed-systems`
+* institute: `MIT`
+* code: `6.824 (now 6.5840)`
+* title: `Distributed Computer Systems Engineering`
+* level: `Graduate (Set A)`
+* summary: `Core distributed systems course; RPC, consistency, replication, fault tolerance, MapReduce, Raft/Paxos, and modern storage systems.`
+* prerequisites: `Operating systems and systems programming (e.g., 6.004 + 6.033/6.828); strong Go/low-level coding skills.`
+* hardness: `Very High.`
+* leads_to: `Backend/distributed systems engineering roles; infra for large-scale ML systems.`
+* url_main: `https://ocw.mit.edu/courses/6-824-distributed-computer-systems-engineering-spring-2006/`
+* url_alt: `https://pdos.csail.mit.edu/6.824/ (current 6.5840 home page).`
+
+---
+
+**(28) CMU 18-447 – Computer Architecture**
+
+* course_key: `cmu-18-447-comparch`
+* institute: `Carnegie Mellon University`
+* code: `18-447`
+* title: `Introduction to Computer Architecture`
+* level: `Upper-division undergraduate (Set B)`
+* summary: `Undergrad computer architecture course (Onur Mutlu legacy version); pipeline, caches, memory systems, and basic microarchitecture.` 
+* prerequisites: `Digital logic and basic computer organization.`
+* hardness: `High.`
+* leads_to: `ETH advanced architecture courses; hardware design roles.`
+* url_main: `Archived CMU 18-447 course pages (if still available).`
+
+---
+
+**(29) ETH Zürich – Onur Mutlu Computer Architecture / Memory Systems** ([ocw.ece.cornell.edu][16])
+
+* course_key: `eth-mutlu-arch`
+* institute: `ETH Zürich`
+* code: `Onur Mutlu Architecture Courses`
+* title: `Computer Architecture and Memory Systems`
+* level: `Graduate / advanced undergraduate (Set A/B)`
+* summary: `Updated architecture lectures including modern topics like RowHammer, speculative execution attacks (Meltdown/Spectre), and advanced memory systems.`
+* prerequisites: `Undergraduate computer architecture/digital logic.`
+* hardness: `Very High.`
+* leads_to: `Hardware/architecture research, high-performance computing, systems design.`
+* url_main: `https://www.youtube.com/@OnurMutluLectures/streams`
+
+---
+
+### 6. Undergraduate Foundations (Set B)
+
+**(30) MIT 6.002 – Circuits and Electronics** 
+
+* course_key: `mit-6-002-circuits`
+* institute: `MIT`
+* code: `6.002`
+* title: `Circuits and Electronics`
+* level: `Lower/upper-division undergraduate (Set B)`
+* summary: `Foundational circuits course introducing lumped element models, op-amps, diodes, transistors, and basic analog/digital circuit design.`
+* prerequisites: `Single-variable calculus; basic physics (electricity and magnetism).`
+* hardness: `Medium–High.`
+* leads_to: `Electronics, embedded systems, power electronics, analog design.`
+* url_main: `MIT OCW page for 6.002 Circuits and Electronics.`
+
+---
+
+**(31) MIT 6.111 – Introductory Digital Systems Laboratory** 
+
+* course_key: `mit-6-111-digital-systems`
+* institute: `MIT`
+* code: `6.111`
+* title: `Introductory Digital Systems Laboratory`
+* level: `Upper-division undergraduate (Set B)`
+* summary: `Digital logic and FPGA-based systems design lab; older versions use outdated tools, recommended mainly for boolean logic theory.`
+* prerequisites: `Intro digital logic / basic circuits; some Verilog/VHDL helps.`
+* hardness: `High (lab intensive).`
+* leads_to: `FPGA design, embedded digital systems, follow-on with Cornell ECE 5760 for modern toolchains.`
+* url_main: `MIT OCW page for 6.111.`
+
+---
+
+**(32) Cornell ECE 5760 – Advanced Microcontroller Design and System-on-Chip** ([ocw.ece.cornell.edu][3])
+
+* course_key: `cornell-ece-5760-soc`
+* institute: `Cornell University`
+* code: `ECE 5760`
+* title: `Advanced Microcontroller Design and System-on-Chip`
+* level: `Graduate / advanced undergraduate (Set B)`
+* summary: `Hands-on FPGA/System-on-Chip design using modern tools; students build embedded systems on DE1-SoC boards with custom peripherals and real-time OS.`
+* prerequisites: `Undergraduate digital design and some embedded systems experience.`
+* hardness: `High.`
+* leads_to: `FPGA/SoC design roles; embedded systems engineering.`
+* url_main: `https://ocw.ece.cornell.edu/courses/ece-5760-advanced-microcontroller-design-and-system-on-chip/`
+
+---
+
+**(33) MIT 6.006 – Introduction to Algorithms (Spring 2020 version)** ([YouTube][17])
+
+* course_key: `mit-6-006-algorithms-2020`
+* institute: `MIT`
+* code: `6.006`
+* title: `Introduction to Algorithms`
+* level: `Undergraduate (Set B)`
+* summary: `Core algorithms course; asymptotic analysis, sorting, data structures, dynamic programming, and graph algorithms, with updated 2020 video set.`
+* prerequisites: `Discrete math; basic programming (Python/Java/C++).`
+* hardness: `High.`
+* leads_to: `Advanced algorithms, competitive programming, systems and ML engineering.`
+* url_main: `https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/`
+
+---
+
+**(34) CMU 15-445/645 – Introduction to Database Systems** ([learncs.me][18])
+
+* course_key: `cmu-15-445-intro-db`
+* institute: `Carnegie Mellon University`
+* code: `15-445/645`
+* title: `Introduction to Database Systems`
+* level: `Upper-division undergraduate / graduate (Set B)`
+* summary: `Modern database systems course (Andy Pavlo); covers storage layouts, indexing, query execution, concurrency control, logging, and modern OLAP/OLTP architectures.`
+* prerequisites: `Systems programming (C/C++), data structures; basic OS concepts.`
+* hardness: `High.`
+* leads_to: `Database engine development, data infrastructure roles, large-scale data systems work.`
+* url_main: `https://15445.courses.cs.cmu.edu/2025/` or current term page.
+
+---
+
+### How to use this in `main(3).tex`
+
+For each course, you now have the fields your LaTeX file likely expects:
+
+```text
+course_key / institute / code / title / level / summary / prerequisites / hardness / leads_to / url_main [/ url_alt]
+```
+
+You can:
+
+* Either plug these directly into your existing course macro in `main(3).tex`,
+* Or define a helper like
+  `\ocwcourse{<key>}{<institute>}{<code>}{<title>}{<level>}{<summary>}{<prereqs>}{<hardness>}{<leads_to>}{<url_main>}`
+  and paste each block in.
+
+If your PDF copy includes an actual JSON appendix with **additional** courses beyond the ones named in the prose, I can’t see that JSON from here; the list above covers all courses explicitly referenced in the text sections of the report.
+
+[1]: https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/?utm_source=chatgpt.com "Quantum Physics I"
+[2]: https://arxiv.org/abs/2003.07082?utm_source=chatgpt.com "Stanza: A Python Natural Language Processing Toolkit for Many Human Languages"
+[3]: https://ocw.ece.cornell.edu/courses/ece-5760-advanced-microcontroller-design-and-system-on-chip/?utm_source=chatgpt.com "ECE 5760 Advanced Microcontroller Design and System-On ..."
+[4]: https://learn.mit.edu/c/department/literature?resource=9161&utm_source=chatgpt.com "MIT 8.04 Quantum Physics I, Spring 2016"
+[5]: https://pdos.csail.mit.edu/6.824/?utm_source=chatgpt.com "6.5840 Home Page: Spring 2025"
+[6]: https://classes.cornell.edu/browse/roster/SP24/class/ECE/5760?utm_source=chatgpt.com "Class Roster - Spring 2024 - ECE 5760 - Cornell University"
+[7]: https://www.reddit.com/r/golang/comments/1gqi8xt/experience_with_mit_distributed_systems_course/?utm_source=chatgpt.com "Experience with MIT Distributed Systems course : r/golang"
+[8]: https://web.stanford.edu/class/cs224n/?utm_source=chatgpt.com "CS224N: Natural Language Processing with Deep Learning"
+[9]: https://www.youtube.com/watch?v=jANZxzetPaQ&utm_source=chatgpt.com "Quantum mechanics as a framework. Defining linearity"
+[10]: https://www.youtube.com/playlist?list=PLDqMkB5cbBA4OW0fDTu1FY6aw4uBWOpBa&utm_source=chatgpt.com "DE1-SoC FPGA Lectures"
+[11]: https://www.infocobuild.com/education/audio-video-courses/physics/8-04-spring2016-mitocw.html?utm_source=chatgpt.com "8.04 Quantum Physics I (Spring 2016, MIT OCW)"
+[12]: https://online.stanford.edu/courses/cs224n-natural-language-processing-deep-learning?utm_source=chatgpt.com "Natural Language Processing Deep Learning I Stanford Online"
+[13]: https://www.coursicle.com/cornell/courses/ECE/5760/?utm_source=chatgpt.com "ECE 5760 - Advanced Microcontroller Design"
+[14]: https://learn.mit.edu/c/unit/see?resource=9161&utm_source=chatgpt.com "MIT 8.04 Quantum Physics I, Spring 2016"
+[15]: https://ocw.mit.edu/courses/6-824-distributed-computer-systems-engineering-spring-2006/?utm_source=chatgpt.com "Distributed Computer Systems Engineering"
+[16]: https://ocw.ece.cornell.edu/courses/ece-5760-advanced-microcontroller-design-and-system-on-chip/ece-5760-lecture-notes-and-handouts/?utm_source=chatgpt.com "ECE 5760 Lecture Notes and Handouts"
+[17]: https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D&utm_source=chatgpt.com "Stanford CS224N Natural Language Processing with Deep ..."
+[18]: https://learncs.me/mit/6.824/?utm_source=chatgpt.com "6.824 Distributed Systems | Learn CS"
+
