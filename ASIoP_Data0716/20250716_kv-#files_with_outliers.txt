@@ -1,0 +1,150 @@
+====================================================================================================
+COMPREHENSIVE FINAL STATISTICS
+====================================================================================================
+
+--- FILE PROCESSING SUMMARY ---
+Total CSV files found: 700
+Files successfully processed: 700
+Files with numeric names found: 700
+
+--- GLOBAL STATISTICS (from ALL files) ---
+Global Mean: 0.00395954
+Global Standard Deviation: 0.044094
+
+--- DETAILED OUTLIER ANALYSIS RESULTS ---
+Sigma | Range Start | Range End | Files Analyzed | Files w/ Outliers | Total Outliers
+-------------------------------------------------------------------------------------
+    1 |           0 |        99 |            100 |               100 |           1920
+    1 |         100 |       199 |            100 |               100 |           1802
+    1 |         200 |       299 |            100 |               100 |           2248
+    1 |         300 |       399 |            100 |               100 |           2433
+    1 |         400 |       499 |            100 |               100 |           3897
+    1 |         500 |       599 |            100 |               100 |           5187
+    1 |         600 |       699 |            100 |               100 |          14534
+    2 |           0 |        99 |            100 |                 4 |              5
+    2 |         100 |       199 |            100 |                 4 |              5
+    2 |         200 |       299 |            100 |                19 |             80
+    2 |         300 |       399 |            100 |                49 |            212
+    2 |         400 |       499 |            100 |                80 |            845
+    2 |         500 |       599 |            100 |                88 |           1438
+    2 |         600 |       699 |            100 |                93 |           6285
+    3 |           0 |        99 |            100 |                 0 |              0
+    3 |         100 |       199 |            100 |                 0 |              0
+    3 |         200 |       299 |            100 |                10 |             37
+    3 |         300 |       399 |            100 |                32 |            137
+    3 |         400 |       499 |            100 |                75 |            571
+    3 |         500 |       599 |            100 |                81 |            975
+    3 |         600 |       699 |            100 |                91 |           4308
+    4 |           0 |        99 |            100 |                 0 |              0
+    4 |         100 |       199 |            100 |                 0 |              0
+    4 |         200 |       299 |            100 |                 6 |             22
+    4 |         300 |       399 |            100 |                24 |             89
+    4 |         400 |       499 |            100 |                64 |            437
+    4 |         500 |       599 |            100 |                72 |            717
+    4 |         600 |       699 |            100 |                87 |           3041
+    5 |           0 |        99 |            100 |                 0 |              0
+    5 |         100 |       199 |            100 |                 0 |              0
+    5 |         200 |       299 |            100 |                 4 |             12
+    5 |         300 |       399 |            100 |                20 |             66
+    5 |         400 |       499 |            100 |                55 |            341
+    5 |         500 |       599 |            100 |                68 |            595
+    5 |         600 |       699 |            100 |                83 |           2328
+
+--- SUMMARY BY SIGMA THRESHOLD ---
+1-Sigma Threshold:
+  Ranges processed: 7
+  Total files analyzed: 700
+  Total files with outliers: 700
+  Total outliers found: 32021
+  Percentage of files with outliers: 100%
+
+2-Sigma Threshold:
+  Ranges processed: 7
+  Total files analyzed: 700
+  Total files with outliers: 337
+  Total outliers found: 8870
+  Percentage of files with outliers: 48.1429%
+
+3-Sigma Threshold:
+  Ranges processed: 7
+  Total files analyzed: 700
+  Total files with outliers: 289
+  Total outliers found: 6028
+  Percentage of files with outliers: 41.2857%
+
+4-Sigma Threshold:
+  Ranges processed: 7
+  Total files analyzed: 700
+  Total files with outliers: 253
+  Total outliers found: 4306
+  Percentage of files with outliers: 36.1429%
+
+5-Sigma Threshold:
+  Ranges processed: 7
+  Total files analyzed: 700
+  Total files with outliers: 230
+  Total outliers found: 3342
+  Percentage of files with outliers: 32.8571%
+
+--- SUMMARY BY RANGE (across all sigma thresholds) ---
+Range [0, 99]:
+  Files in range: 100
+  1-sigma: 1920 outliers in 100/100 files
+  2-sigma: 5 outliers in 4/100 files
+  3-sigma: 0 outliers in 0/100 files
+  4-sigma: 0 outliers in 0/100 files
+  5-sigma: 0 outliers in 0/100 files
+
+Range [100, 199]:
+  Files in range: 100
+  1-sigma: 1802 outliers in 100/100 files
+  2-sigma: 5 outliers in 4/100 files
+  3-sigma: 0 outliers in 0/100 files
+  4-sigma: 0 outliers in 0/100 files
+  5-sigma: 0 outliers in 0/100 files
+
+Range [200, 299]:
+  Files in range: 100
+  1-sigma: 2248 outliers in 100/100 files
+  2-sigma: 80 outliers in 19/100 files
+  3-sigma: 37 outliers in 10/100 files
+  4-sigma: 22 outliers in 6/100 files
+  5-sigma: 12 outliers in 4/100 files
+
+Range [300, 399]:
+  Files in range: 100
+  1-sigma: 2433 outliers in 100/100 files
+  2-sigma: 212 outliers in 49/100 files
+  3-sigma: 137 outliers in 32/100 files
+  4-sigma: 89 outliers in 24/100 files
+  5-sigma: 66 outliers in 20/100 files
+
+Range [400, 499]:
+  Files in range: 100
+  1-sigma: 3897 outliers in 100/100 files
+  2-sigma: 845 outliers in 80/100 files
+  3-sigma: 571 outliers in 75/100 files
+  4-sigma: 437 outliers in 64/100 files
+  5-sigma: 341 outliers in 55/100 files
+
+Range [500, 599]:
+  Files in range: 100
+  1-sigma: 5187 outliers in 100/100 files
+  2-sigma: 1438 outliers in 88/100 files
+  3-sigma: 975 outliers in 81/100 files
+  4-sigma: 717 outliers in 72/100 files
+  5-sigma: 595 outliers in 68/100 files
+
+Range [600, 699]:
+  Files in range: 100
+  1-sigma: 14534 outliers in 100/100 files
+  2-sigma: 6285 outliers in 93/100 files
+  3-sigma: 4308 outliers in 91/100 files
+  4-sigma: 3041 outliers in 87/100 files
+  5-sigma: 2328 outliers in 83/100 files
+
+--- GRAND TOTALS ---
+Total analyses performed: 35
+Grand total outliers found (all sigma thresholds, all ranges): 54567
+
+====================================================================================================

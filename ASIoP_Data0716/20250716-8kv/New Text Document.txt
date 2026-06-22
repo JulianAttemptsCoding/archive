@@ -1,0 +1,313 @@
+//
+// File: count_outlier_files.C
+//
+// Description:
+// This ROOT C++ macro scans the current directory for CSV files (.csv),
+// reads specific columns (sums columns C+D+E), calculates statistics,
+// and counts how many files contain at least one data point beyond 3 sigma.
+//
+// Dependencies:
+// This script uses standard C++ file I/O for CSV parsing.
+// No external library like libxls is required for CSV.
+//
+// How to Run in ROOT:
+// 1. Launch the ROOT interactive terminal:
+//    root
+//
+// 2. Compile and execute this macro from the ROOT prompt:
+//    .L count_outlier_files.C+
+//    count_outlier_files()
+//
+// The '+' after the macro name tells ROOT to compile it using ACLiC.
+//
+
+#include <TSystem.h>
+#include <TString.h>
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <fstream>   // For CSV file reading
+#include <string>    // For string manipulation
+#include <sstream>   // For parsing lines
+#include <algorithm> // For min_element, max_element
+#include <limits>    // For numeric limits
+
+// --- Function Declarations ---
+
+// Main function to be called from ROOT
+void count_outlier_files();
+
+// Helper function to read data from a single CSV file
+bool read_csv_data(const char* filename, std::vector<double>& time, std::vector<double>& amplitude);
+
+// Helper function to calculate statistics (mean and standard deviation)
+void calculate_stats(const std::vector<double>& data, double& mean, double& stddev);
+
+// Helper function to check if a file has outliers beyond 3 sigma
+bool has_outliers_beyond_3sigma(const std::vector<double>& data);
+
+// Helper function to validate numeric values
+bool is_valid_number(double value);
+
+// Helper function to trim whitespace from strings
+std::string trim(const std::string& str);
+
+// Helper function to safely parse string to double
+bool safe_string_to_double(const std::string& str, double& result);
+
+// --- Main Processing Function ---
+
+void count_outlier_files() {
+    std::cout << "Starting CSV file analysis for 3-sigma outliers..." << std::endl;
+
+    // Counters for results
+    int total_csv_files = 0;
+    int files_with_outliers = 0;
+    int files_processed_successfully = 0;
+
+    // Get the current directory
+    TString current_dir = gSystem->pwd();
+    std::cout << "Current directory: " << current_dir << std::endl;
+    
+    void* dir_handle = gSystem->OpenDirectory(current_dir);
+
+    if (!dir_handle) {
+        std::cerr << "Error: Could not open current directory." << std::endl;
+        return;
+    }
+
+    const char* entry;
+    std::vector<std::string> files_with_outliers_list;
+    
+    // Loop through all files in the directory
+    while ((entry = gSystem->GetDirEntry(dir_handle))) {
+        TString filename(entry);
+        // Filter for .csv files
+        if (filename.EndsWith(".csv")) {
+            total_csv_files++;
+            std::cout << "Processing CSV file: " << filename << std::endl;
+            
+            std::vector<double> file_time, file_amplitude;
+            if (read_csv_data(filename.Data(), file_time, file_amplitude)) {
+                files_processed_successfully++;
+                
+                if (has_outliers_beyond_3sigma(file_amplitude)) {
+                    files_with_outliers++;
+                    files_with_outliers_list.push_back(filename.Data());
+                    std::cout << "  -> File " << filename << " HAS outliers beyond 3-sigma" << std::endl;
+                } else {
+                    std::cout << "  -> File " << filename << " has NO outliers beyond 3-sigma" << std::endl;
+                }
+            } else {
+                std::cerr << "  -> Failed to read data from " << filename << std::endl;
+            }
+        }
+    }
+    gSystem->FreeDirectory(dir_handle);
+
+    // Print final results
+    std::cout << "\n=== FINAL RESULTS ===" << std::endl;
+    std::cout << "Total CSV files found: " << total_csv_files << std::endl;
+    std::cout << "Files successfully processed: " << files_processed_successfully << std::endl;
+    std::cout << "Files with outliers beyond 3-sigma: " << files_with_outliers << std::endl;
+    
+    if (files_processed_successfully > 0) {
+        double percentage = (double)files_with_outliers / files_processed_successfully * 100.0;
+        std::cout << "Percentage of files with outliers: " << percentage << "%" << std::endl;
+    }
+
+    // List the files with outliers
+    if (!files_with_outliers_list.empty()) {
+        std::cout << "\nFiles containing outliers beyond 3-sigma:" << std::endl;
+        for (const auto& file : files_with_outliers_list) {
+            std::cout << "  - " << file << std::endl;
+        }
+    }
+
+    std::cout << "\n=== ANSWER ===" << std::endl;
+    std::cout << "Total number of CSV files with at least one data point beyond 3-sigma: " << files_with_outliers << std::endl;
+}
+
+// --- Helper Function Implementations ---
+
+/**
+ * @brief Reads data from a specified .csv file with comprehensive error handling.
+ * @param filename The name of the CSV file.
+ * @param time Vector to store time data (Column A - 0-indexed).
+ * @param amplitude Vector to store summed amplitude data (Columns C+D+E - 0-indexed 2,3,4).
+ * @return true if successful, false otherwise.
+ */
+bool read_csv_data(const char* filename, std::vector<double>& time, std::vector<double>& amplitude) {
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Error opening CSV file: " << filename << std::endl;
+        return false;
+    }
+
+    std::string line;
+    int current_line_num = 0;
+    const int DATA_START_ROW = 21; // Corresponds to Excel row 22 (0-indexed)
+    int valid_rows = 0;
+    int invalid_rows = 0;
+
+    while (std::getline(file, line)) {
+        current_line_num++;
+        
+        if (current_line_num <= DATA_START_ROW) {
+            continue; // Skip lines until the data start row
+        }
+
+        // Skip empty lines
+        if (trim(line).empty()) {
+            continue;
+        }
+
+        std::stringstream ss(line);
+        std::string segment;
+        std::vector<double> row_values;
+
+        // Parse each segment (column) separated by comma
+        while(std::getline(ss, segment, ',')) {
+            double value;
+            if (safe_string_to_double(trim(segment), value)) {
+                row_values.push_back(value);
+            } else {
+                row_values.push_back(0.0); // Use 0.0 for invalid entries
+            }
+        }
+
+        // Ensure we have enough columns before accessing
+        if (row_values.size() >= 5) { // Need at least 5 columns (A, B, C, D, E)
+            double current_time = row_values[0]; // Column A (0-indexed)
+            double current_amplitude_sum = row_values[2] + row_values[3] + row_values[4]; // Columns C, D, E
+
+            // Validate the calculated values
+            if (is_valid_number(current_time) && is_valid_number(current_amplitude_sum)) {
+                time.push_back(current_time);
+                amplitude.push_back(current_amplitude_sum);
+                valid_rows++;
+            } else {
+                invalid_rows++;
+            }
+        } else {
+            invalid_rows++;
+        }
+    }
+
+    file.close();
+    
+    return valid_rows > 0;
+}
+
+/**
+ * @brief Calculates the mean and standard deviation of a vector of doubles.
+ * @param data The input data vector.
+ * @param mean Output parameter for the calculated mean.
+ * @param stddev Output parameter for the calculated standard deviation.
+ */
+void calculate_stats(const std::vector<double>& data, double& mean, double& stddev) {
+    if (data.empty()) {
+        mean = 0.0;
+        stddev = 0.0;
+        return;
+    }
+
+    // Calculate mean
+    double sum = 0.0;
+    for (const auto& x : data) {
+        sum += x;
+    }
+    mean = sum / data.size();
+
+    // Calculate standard deviation
+    double sq_sum = 0.0;
+    for (const auto& x : data) {
+        double diff = x - mean;
+        sq_sum += diff * diff;
+    }
+    stddev = std::sqrt(sq_sum / data.size());
+}
+
+/**
+ * @brief Checks if a dataset has any outliers beyond 3 sigma.
+ * @param data The input data vector.
+ * @return true if there are outliers beyond 3 sigma, false otherwise.
+ */
+bool has_outliers_beyond_3sigma(const std::vector<double>& data) {
+    if (data.empty()) {
+        return false;
+    }
+
+    double mean, stddev;
+    calculate_stats(data, mean, stddev);
+
+    // Check if statistics are valid
+    if (!is_valid_number(mean) || !is_valid_number(stddev) || stddev == 0.0) {
+        return false;
+    }
+
+    double lower_bound = mean - 3 * stddev;
+    double upper_bound = mean + 3 * stddev;
+
+    // Check each data point
+    for (const auto& value : data) {
+        if (value < lower_bound || value > upper_bound) {
+            return true; // Found an outlier
+        }
+    }
+
+    return false; // No outliers found
+}
+
+/**
+ * @brief Validates if a number is finite and not NaN.
+ * @param value The value to check.
+ * @return true if the value is valid, false otherwise.
+ */
+bool is_valid_number(double value) {
+    return std::isfinite(value) && !std::isnan(value);
+}
+
+/**
+ * @brief Trims whitespace from the beginning and end of a string.
+ * @param str The string to trim.
+ * @return The trimmed string.
+ */
+std::string trim(const std::string& str) {
+    size_t first = str.find_first_not_of(" \t\r\n");
+    if (first == std::string::npos) {
+        return "";
+    }
+    size_t last = str.find_last_not_of(" \t\r\n");
+    return str.substr(first, (last - first + 1));
+}
+
+/**
+ * @brief Safely converts a string to double with error handling.
+ * @param str The string to convert.
+ * @param result The output double value.
+ * @return true if conversion was successful, false otherwise.
+ */
+bool safe_string_to_double(const std::string& str, double& result) {
+    if (str.empty()) {
+        return false;
+    }
+    
+    try {
+        size_t processed = 0;
+        result = std::stod(str, &processed);
+        
+        // Check if the entire string was processed
+        if (processed != str.length()) {
+            return false;
+        }
+        
+        // Check if the result is valid
+        return is_valid_number(result);
+        
+    } catch (const std::invalid_argument&) {
+        return false;
+    } catch (const std::out_of_range&) {
+        return false;
+    }
+}
