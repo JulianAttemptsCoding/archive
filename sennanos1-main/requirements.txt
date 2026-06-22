@@ -1,0 +1,18 @@
+# Sentinel Nano S1 - Python Dependencies
+
+# Core numerical computing
+numpy>=1.21.0
+
+# Optional: For enhanced confidence estimation
+scipy>=1.7.0
+
+# Development and testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Logging and utilities
+python-dateutil>=2.8.0
+
+# Optional: For visualization (not required for core algorithms)
+# matplotlib>=3.5.0
+# seaborn>=0.11.0
